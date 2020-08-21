@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,66 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PathProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VSJ-Gs-BEN" customClass="View1" customModule="PathProject" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="207" height="200"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="Pi2-aV-cfx"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nQe-AJ-EiP" customClass="View2" customModule="PathProject" customModuleProvider="target">
+                                <rect key="frame" x="207" y="44" width="207" height="200"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="FWZ-8m-iYw"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TQC-xi-OXp" customClass="View4" customModule="PathProject" customModuleProvider="target">
+                                <rect key="frame" x="207" y="244" width="207" height="200"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="Ran-5M-cXV"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TRO-EP-JCI" customClass="View3" customModule="PathProject" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="244" width="207" height="200"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="2uI-zR-J5q"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="TQC-xi-OXp" firstAttribute="width" secondItem="TRO-EP-JCI" secondAttribute="width" id="0FQ-px-qmx"/>
+                            <constraint firstItem="nQe-AJ-EiP" firstAttribute="leading" secondItem="VSJ-Gs-BEN" secondAttribute="trailing" id="65Z-pN-0Ny"/>
+                            <constraint firstItem="VSJ-Gs-BEN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="73L-Fu-KIY"/>
+                            <constraint firstItem="TQC-xi-OXp" firstAttribute="top" secondItem="nQe-AJ-EiP" secondAttribute="bottom" id="GHK-vT-7oy"/>
+                            <constraint firstItem="TRO-EP-JCI" firstAttribute="top" secondItem="VSJ-Gs-BEN" secondAttribute="bottom" id="Hgc-6x-Pil"/>
+                            <constraint firstItem="nQe-AJ-EiP" firstAttribute="width" secondItem="VSJ-Gs-BEN" secondAttribute="width" id="PQ7-JX-JM5"/>
+                            <constraint firstItem="TQC-xi-OXp" firstAttribute="leading" secondItem="TRO-EP-JCI" secondAttribute="trailing" id="YLn-cw-LJo"/>
+                            <constraint firstItem="TRO-EP-JCI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="awY-9Z-j5r"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nQe-AJ-EiP" secondAttribute="trailing" id="ggp-QW-zvl"/>
+                            <constraint firstItem="nQe-AJ-EiP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="lQf-zi-CgF"/>
+                            <constraint firstItem="TQC-xi-OXp" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="t0b-og-Td4"/>
+                            <constraint firstItem="VSJ-Gs-BEN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="wih-ud-G5P"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="view1" destination="VSJ-Gs-BEN" id="qlc-uu-277"/>
+                        <outlet property="view2" destination="nQe-AJ-EiP" id="I0e-5R-c8a"/>
+                        <outlet property="view4" destination="TQC-xi-OXp" id="6Km-Da-QAV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="128.57142857142856"/>
         </scene>
     </scenes>
 </document>
