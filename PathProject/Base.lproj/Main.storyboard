@@ -30,23 +30,31 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TQC-xi-OXp" customClass="View4" customModule="PathProject" customModuleProvider="target">
-                                <rect key="frame" x="207" y="244" width="207" height="200"/>
+                                <rect key="frame" x="207" y="244" width="207" height="100"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="Ran-5M-cXV"/>
+                                    <constraint firstAttribute="height" constant="100" id="Ran-5M-cXV"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TRO-EP-JCI" customClass="View3" customModule="PathProject" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="244" width="207" height="200"/>
+                                <rect key="frame" x="0.0" y="244" width="207" height="100"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="2uI-zR-J5q"/>
+                                    <constraint firstAttribute="height" constant="100" id="2uI-zR-J5q"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NgZ-bZ-ap5" customClass="View5" customModule="PathProject" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="344" width="414" height="120"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="TiO-rW-V00"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="TQC-xi-OXp" firstAttribute="width" secondItem="TRO-EP-JCI" secondAttribute="width" id="0FQ-px-qmx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NgZ-bZ-ap5" secondAttribute="trailing" id="2Qo-qt-cfv"/>
                             <constraint firstItem="nQe-AJ-EiP" firstAttribute="leading" secondItem="VSJ-Gs-BEN" secondAttribute="trailing" id="65Z-pN-0Ny"/>
                             <constraint firstItem="VSJ-Gs-BEN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="73L-Fu-KIY"/>
                             <constraint firstItem="TQC-xi-OXp" firstAttribute="top" secondItem="nQe-AJ-EiP" secondAttribute="bottom" id="GHK-vT-7oy"/>
@@ -54,8 +62,10 @@
                             <constraint firstItem="nQe-AJ-EiP" firstAttribute="width" secondItem="VSJ-Gs-BEN" secondAttribute="width" id="PQ7-JX-JM5"/>
                             <constraint firstItem="TQC-xi-OXp" firstAttribute="leading" secondItem="TRO-EP-JCI" secondAttribute="trailing" id="YLn-cw-LJo"/>
                             <constraint firstItem="TRO-EP-JCI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="awY-9Z-j5r"/>
+                            <constraint firstItem="NgZ-bZ-ap5" firstAttribute="top" secondItem="TQC-xi-OXp" secondAttribute="bottom" id="elM-G6-q8r"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nQe-AJ-EiP" secondAttribute="trailing" id="ggp-QW-zvl"/>
                             <constraint firstItem="nQe-AJ-EiP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="lQf-zi-CgF"/>
+                            <constraint firstItem="NgZ-bZ-ap5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="lvr-4p-2nA"/>
                             <constraint firstItem="TQC-xi-OXp" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="t0b-og-Td4"/>
                             <constraint firstItem="VSJ-Gs-BEN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="wih-ud-G5P"/>
                         </constraints>

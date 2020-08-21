@@ -135,7 +135,7 @@ class View4: UIView {
                 circle.fillColor = UIColor.red.cgColor
             }
             
-            let frame = CGRect(x: circleSize * CGFloat(i) + circleSpacing * CGFloat(i), y: 0, width: circleSize, height: circleSize)
+            let frame = CGRect(x: 40 + circleSize * CGFloat(i) + circleSpacing * CGFloat(i), y: 0, width: circleSize, height: circleSize)
             circle.frame = frame
 
             animation.beginTime = currentTime + beginTimes[i]
@@ -144,5 +144,48 @@ class View4: UIView {
             circle.add(colorKeyframeAnimation, forKey: "animation2")
             self.layer.addSublayer(circle)
         }
+    }
+}
+
+class View5: UIView {
+    let percent = 87 // 넣는 값에 따라 달라짐
+    
+    override func draw(_ rect: CGRect) {
+        let graphBarScorePath = scorePath(width: self.frame.width - 48, height: self.frame.height)
+        let graphBarScoreLayer = scoreLayer(path: graphBarScorePath, score: CGFloat(percent), color: UIColor.systemBlue.cgColor, lineWidth: 8)
+
+        self.layer.addSublayer(graphBarScoreLayer)
+        scoreAnimation(layer: graphBarScoreLayer, score: CGFloat(percent))
+    }
+    
+    private func scorePath(width: CGFloat, height: CGFloat) -> CGPath {
+        let path = UIBezierPath()
+        path.move(to: CGPoint(x: 24, y: height - 18))
+        path.addLine(to: CGPoint(x: 24 + width, y: height - 18))
+        
+        return path.cgPath
+    }
+    
+    private func scoreLayer(path: CGPath, score: CGFloat, color: CGColor, lineWidth: CGFloat) -> CAShapeLayer {
+        let layer = CAShapeLayer()
+        layer.path = path
+        layer.strokeEnd = score * 0.01
+        layer.strokeColor = color
+        layer.lineCap = .round
+        layer.lineWidth = lineWidth
+        layer.fillColor = nil
+        
+        return layer
+    }
+    
+    private func scoreAnimation(layer: CAShapeLayer, score: CGFloat) {
+        let animation = CABasicAnimation(keyPath: "strokeEnd")
+        animation.fromValue = 0
+        animation.toValue = score * 0.01
+        animation.duration = 0.5
+        animation.isRemovedOnCompletion = false
+//        animation.repeatCount = HUGE
+        
+        layer.add(animation, forKey: "scoreAnimation")
     }
 }
